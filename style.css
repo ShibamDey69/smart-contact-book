@@ -105,7 +105,7 @@ input:focus {
   font-variant-numeric: tabular-nums;
 }
 
-ul { list-style: none; padding: 0; display: grid; gap: var(--gap); }
+ul { list-style: none; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap); }
 
 li {
   display: flex;
@@ -115,6 +115,7 @@ li {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 12px 14px;
+  min-width: 0;
   animation: in .2s ease both;
 }
 @keyframes in { from { opacity: 0; transform: translateY(4px); } }
@@ -178,7 +179,7 @@ dialog label input { margin-top: 4px; }
 
 @media (min-width: 720px) {
   main { max-width: 860px; }
-  ul { grid-template-columns: 1fr 1fr; }
+  ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 480px) {
