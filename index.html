@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Contacts<span>.</span></h1>
+      <button id="add" class="btn primary">+ New</button>
+    </header>
+
+    <input id="q" type="search" placeholder="Search by name…  (try “ar” or “priya s”)" autocomplete="off" autofocus>
+
+    <div id="groups" class="chips"></div>
+    <p id="meta"></p>
+    <ul id="list"></ul>
+  </main>
+
+  <dialog id="dlg">
+    <form id="form">
+      <h2>New contact</h2>
+      <label>Name <input name="name" required></label>
+      <label>Phone <input name="phone" type="tel" required></label>
+      <label>Email <input name="email" type="email"></label>
+      <label>Company <input name="company" placeholder="Optional"></label>
+      <div class="actions">
+        <button type="button" class="btn" id="cancel">Cancel</button>
+        <button class="btn primary">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
